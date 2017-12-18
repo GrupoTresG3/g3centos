@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GRUPO 3</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="img/logo.gif" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style Wordpress.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <img class="imglogo" src="img/logo.gif" alt="" title="" /></img>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+        	<li><a href="index.html" >Home</a></li>
+          <li><a href="Owncloud.html" >Owncloud</a></li>
+          <li><a href="Wordpress.html" ><b>Wordpress</b></a></li>
+          <li><a href="Prestashop.html" >Prestashop</a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+<!--INSAUSTI SE QUE ESTAS LEYENDO ESTO SSSSSSSSH-->
+  <!--==========================
+  Owncloud Section
+  ============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Wordpress</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Tutorial de Instalación de Wordpress</p>
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="Texto">
+          <h2 class="about-title">¿Qué es WordPress?</h2>
+          <p class="about-text">
+            WordPress es un sistema de gestión de contenidos (CMS) que permite crear y mantener un blog u otro tipo de web, tiene más de un millar de temas (plantillas) disponibles en su web oficial, no es solo un sistema sencillo e intuitivo para crear un blog, sino que permite realizar toda clase de webs más complejas.
+            Es un sistema ideal para actualizar periódicamente nuestro sitio web.
+          </p>
+          <h2 class="about-title">¿Qué componentes tiene WordPress?</h2>
+          <p class="about-text">
+            También dispone de unos componentes muy útiles y esenciales para la creación de la web.
+            <ul>
+              <li>Plugins</li>
+              <li>Widgets</li>
+              <li>Temas</li>
+            </ul>   
+          </p>
+          <h2 class="about-title">¿Qué requisitos necesita tu ordenador?</h2>
+          <p class="about-text">
+            Para la instalación del hosting de wordpress necesitarás:
+            <ul>
+              <li>PHP 5.2.4 o superior.</li>
+              <li>MySQL 5.0.15 o superior.</li>
+              <li>Lo ideal, es que el hosting corra sobre una plataforma Linux.</li>
+            </ul>   
+          </p>
+          <h2 class="about-title">Instalación</h2>
+          <h3><b>1. Instalación y creación de Base de Datos</b></h3>
+          <p class="about-text">
+            1.1. Para guardar todos los datos de owncloud, debemos tener una base de datos.  Para ello descargamos un gestor de base de datos. Gracias al que crearemos y gestionaremos nuestra base de datos. Usaremos el comando:
+            <br>
+            <b>$ yum install mariadb-server mariadb</b>
+            Habilitamos el mariadb:
+            <b>$ systemctl start mariadb</b>
+            Establecemos una contraseña para el mariadb
+            <b>$ mysql_secure_installation</b>
+            <br>
+            <img class="tutoriales" src="img/centos020.png">
+            <br>
+            <br>
+            1.2. Una vez instalados, entraremos dentro de mysql usando este comando:
+            <br>
+            <b>$ mysql -u root -p</b>
+            <br>
+            <br>
+            1.3. Finalmente crearemos la base de datos.
+            <br>
+            <b>CREATE DATABASE wordpress;</b>
+            <br>
+            <b>CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';</b>
+            <br>
+            <b>GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'password';</b>
+            <br>
+            <b>FLUSH PRIVILEGES;</b>
+            <br>
+            <b>exit;</b>
+            <br>
+            <br> 
+          </p>
+          <h3><b>2. Descargar WordPress</b></h3>
+          <p class="about-text">
+            2.1. Debemos descargar la versión estable mas reciente de wordpress. Estos se consigue escribiendo el comando:
+            <br>
+            <b>$ wget http://wordpress.org/latest.tar.gz</b>
+            <br>
+            <br>
+            Si lo queremos en español, escribiremos:
+            <br>
+            <b>$ wget https://es.wordpress.org/wordpress-4.8.2-es_ES.tar.gz</b>
+            <br>
+            <br>
+            2.2. A continuación, extraemos los archivos del zip descargado usando este comando:
+            <br>
+            <b>$ tar xzvf latest.tar.gz</b>
+            <br>
+            <br>
+            2.3. Esto creará un directorio llamado WordPress en nuestra carpeta. Por lo tanto necesitaremos los paquetes más actualizados, usaremos:
+            <br>
+            <b>$ yum update</b>
+            <br>
+            <br>
+            2.4. Para que WordPress reconozca la base de datos hay que modificar un archivo llamado wp-config-sample.php, después de modificar los datos de la base de datos guardamos el archivo como wp-config.php.
+            <br>
+            <img class="tutorialesWord" src="img/wordpress001.png">
+            <br>
+            <br>
+            2.5. Y por último, para poder trabajar con  imágenes, plugins y que para poder actualizar porciones de tu sitio usando tus credenciales SSH para logarte, añadiremo
+            <br>
+            <b>$ yum install php70u*</b>
+            <br>
+            <b>$ service httpd restart</b>
+            <br>
+            <br>
+          </p>
+          <h3><b>3. Copiar archivos de la raíz de Documentación de nuestro servidor web</b></h3>
+          <p class="about-text">
+            3.1. Ya teniendo la aplicación configurada, la copiaremos dentro de la raíz de documentos de nuestro servidor Web, la localización de la raíz de documentos en LAMPP de Ubuntu es <b>/var/www/html</b> o <b>/opt/lampp/htdocs</b>, para transferir los archivos escribiremos:
+            <br>
+            <b>$ sudo rsync -avP ~/wordpress/ /var/www/html/</b>
+            <br>
+            o
+          <!--  <br>
+            <b># sudo cp -r ~/wordpress/* /opt/lampp/htdocs</b>
+            <br>
+            <br>-->
+            3.2. Ya copiado de forma segura nos moveremos hacia dentro de la raíz:
+            <br>
+            <b>$ cd /var/www/html </b>
+            <br>
+            o
+            <br>
+            <b>$ cd /opt/lampp/htdocs</b>
+            <br>
+            <br>
+            3.3. Primero, vamos a crear manualmente el directorio de uploads tras el directorio de wp-content en nuestra raiz de documentos. Este será el directorio de nuestro contenido:
+            <br>
+            <b>$ mkdir /var/www/html/wp-content/uploads</b>
+            <br>
+            <br>
+             3.4. Ahora tenemos un directorio donde dejar los ficheros que subamos, pero necesitaremos mayores permisos, para ello:
+            <br>
+            <b>$ sudo chown -R apache:apache /var/www/html/*</b>
+            <br>
+            <br>
+          </p>
+          <h3><b>4. Completa la instalación a través de la interfaz web</b></h3>
+          <p class="about-text">
+            4.1. Ahora que tienes los archivos en su sitio y tu software está configurado, puedes completar la instalación a través del interfaz web. En tu navegador web, dirígete a la URL de tu servidor web:
+            <br>
+            <b> http://nombre_DNS_o_IP</b>
+            <br>
+            <br>
+            4.2. Veras la página inicial de configuración de WordPress, donde crearás una cuenta inicial de administrador.
+            <br>
+            <img class="tutorialesWord" src="img/wordpress002.png">
+            <br>
+            <br>
+            <img class="tutorialesWord" src="img/wordpress003.png">
+            <br>
+            <br>
+            4.3. Al finalizar todos los pasos WordPress confirmará la instalación y te pedirá que accedas con la cuenta que acabas de crear. Presiona el botón de debajo y después rellena los campos necesarios para acceder con la información de tu cuenta.
+            <br>
+            <img class="tutorialesWord" src="img/wordpress004.png">
+            <br>
+            <br>
+            4.4. Tras esto verás la interfaz de WordPress y podrás comenzar a montar tu web o blog.
+            <br>
+            <img class="tutorialesWord" src="img/wordpress005.png">
+            <br>
+            <br>
+            <h3><a href="http://10.9.53.106/wordpress/"  target="_blanck"><b>Nuestro Wordpress</b></a></h3>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>GRUPO3 2017</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>

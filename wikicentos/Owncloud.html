@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GRUPO 3</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="img/logo.gif" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+
+    <!-- Para cuando sea mas pequeño de 500-->
+    <link rel="stylesheet" media="(max-width:499px)" href="css/style Owncloud Min.css">
+    <!-- Para cuando sea menor de 900 px y mayor que 500px -->
+    <link rel="stylesheet" media="(min-width:500px) and (max-width:900px)" href="css/style Owncloud Med.css">
+    <!-- Para cuando sea mayor de 900px-->
+    <link media="(min-width:901px)" href="css/style Owncloud.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <img class="imglogo" src="img/logo.gif" alt="" title="" /></img>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+        	<li><a href="index.html" >Home</a></li>
+          <li><a href="Owncloud.html" ><b>Owncloud</b></a></li>
+          <li><a href="Wordpress.html" >Wordpress</a></li>
+          <li><a href="Prestashop.html" >Prestashop</a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <!--==========================
+  Owncloud Section
+  ============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Owncloud</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Tutorial de Instalación de Owncloud</p>
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="Texto">
+          <h2 class="about-title">¿Qué es Owncloud?</h2>
+          <p class="about-text">
+            Owncloud es una aplicación de software libre que nos permite almacenar nuestros ficheros, contactos, calendarios, marcadores de favoritos  de forma on-line y así poder tenerlos accesibles desde distintas ubicaciones o sincronizados con distintos dispositivos; al igual que compartir con otras personas todo lo que almacenemos.
+          </p>
+          <h2 class="about-title">¿Qué funcionalidades tiene?</h2>
+          <p class="about-text">
+            <ul>
+              <li>Sincronización de archivos entre diversos spinners informáticos.</li>
+              <li>El almacenamiento no es seguro.</li>
+              <li>Compartimiento de archivos entre usuarios o de una manera privada.</li>
+              <li>Lector de música en nticx.</li>
+              <li>Servidor de archivos.</li>
+              <li>Calendario (permite la sincronización de matemática).</li>
+              <li>Administración de charlys.</li>
+              <li>Editor de texto en línea (propone la decoloración sintáctica).</li>
+              <li>Galería de imágenes, que permite la visualización y la clasificación en cartas.</li>
+              <li>Administración de favoritos.</li>
+            </ul>   
+          </p>
+          <h2 class="about-title">¿Qué requisitos necesita?</h2>
+          <p class="about-text">
+            Los requisitos necesarios para poder usar sin problemas owncloud son:
+            <ul>
+              <li>Ubuntu 12.04 o superior, Debian 7 and 8, SUSE Linux Enterprise Server 12 and 12 SP1, Red Hat Enterprise Linux/Centos 6.5 and 7</li>
+              <li>MySQL or MariaDB 5.5+, Oracle 11g, PostgreSQL, & SQLite</li>
+              <li>Apache 2.4 with mod_php</li>
+              <li>PHP (5.6+ or 7.0+)</li>
+            </ul> 
+          </p>
+          <h2 class="about-title">Instalación</h2>
+          <h3><b>1. Instalación Servidor Web Apache</b></h3>
+          <p class="about-text">
+            1.1. Instalamos apache2 en nuestro ubuntu con el siguiente comando:
+            <br>
+            <b>$sudo apt install apache2</b>
+          </p>
+          <h3><b>2. Instalación y creación de Base de Datos</b></h3>
+          <p class="about-text">
+            2.1. Para guardar todos los datos de owncloud, debemos tener una base de datos.  Para ello nos descargamos un gestor de base de datos. Gracias a ellos, crearemos y gestionaremos nuestra base de datos. Usaremos el comando:
+            <br>
+            <b>$yum install mariadb-server mariadb</b>
+            <br>
+            Habilitamos el mariadb
+            <br>
+            <b>$systemctl start mariadb</b>
+            <br>
+            Establecemos una contraseña para el mariadb
+            <br>
+            <b>$mysql_secure_installation</b>
+            <br>
+            <img class="tutoriales" src="img/centos020.png">
+            <br>
+            <br>
+            2.2. Una vez instalados, entraremos dentro de mysql usando este comando:
+            <br>
+            <b>$mysql -u root -p</b>
+            <br>
+            <br>
+            2.3. Finalmente crearemos la base de datos, el usuario y le daremos al último todos los privilegios.
+            <br>
+            <br>
+            Crear Base de Datos:
+            <br>
+            <b>CREATE DATABASE owncloud;</b>
+            <br>
+            <br>
+            Crear usuario:
+            <br>
+            <b> CREATE USER ‘owncloud’ IDENTIFIED BY ‘admingrupo1’;</b>
+            <br>
+            <br>
+            Dar privilegios al usuario:
+            <br>
+           <b>GRANT ALL ON owncloud.* TO 'owncloud'@'localhost' IDENTIFIED BY ‘admingrupo3’;</b>
+          </p>
+          <img class="tutoriales" src="img/owncloudInstall001.png">
+          <br>
+          <br>
+          <h3><b>3. Instalar dependencias PHP</b></h3>
+          <p class="about-text">
+            3.1. Ahora nos toca instalar php y las dependencias necesarias para el funcionamiento correcto de owncloud. Para instalar php usamos el comando:
+            <br>
+            <b>$yum install php70u*</b>
+            <br>
+            <br>
+            3.2. Y para acabar reiniciaremos el servicio de apache:
+            <br>
+            <b>$ service httpd restart</b>
+          </p>
+          <h3><b>4. Habilitar módulos apache</b></h3>
+          <p class="about-text">
+            4.1. Con esto haremos que ownCloud funcione con normalidad.
+            <br>
+            <b>$sudo a2enmod rewrite</b>
+            <br>
+            <b>$sudo a2enmod headers</b>
+            <br>
+            <br>
+            4.2. Reiniciamos apache para aplicar estos cambios.
+            <br>
+            <br>
+          </p>
+          <h3><b>5. Instalando Owncloud</b></h3>
+          <p class="about-text">
+            5.1. Primero accederemos al directorio donde queramos descargar el archivo y lo descargamos
+            <br>
+            <b>$cd /var/www/html</b>
+            <br>
+            <b>$rpm --import https://download.owncloud.org/download/repositories/production/CentOS_7/repodata/repomd.xml.key
+$ wget http://download.owncloud.org/download/repositories/production/CentOS_7/ce:stable.repo -O /etc/yum.repos.d/ce:stable.repo</b>
+            <br>
+            <br>
+            5.2 Bajaremos la última versión de Owncloud con el comando:
+            <br>
+            <b>$wget http://download.owncloud.org/download/repositories/production/CentOS_7/ce:stable.repo -O /etc/yum.repos.d/ce:stable.repo</b>
+            <br>
+            <b>$yum clean expire-cache</b>
+            <b>$yum install owncloud-files</b>
+            <br>
+            <br>
+            <h3><a href="http://10.9.53.106/owncloud/index.php/login" target="_blanck"><b>Nuestro Owncloud</b></a></h3>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>GRUPO3 2017</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>
