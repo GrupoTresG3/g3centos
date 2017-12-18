@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GRUPO 3</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="img/logo.gif" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Para cuando sea mas pequeño de 558-->
+  <link rel="stylesheet" media="(max-width:558px)" href="max558Style.css">
+  <!-- Para cuando sea menor de 850 px y mayor que 558px -->
+  <link rel="stylesheet" media="(min-width:559px)" href="min559max849Style.css">
+  <!-- Para cuando sea mayor de 850px-->
+  <link href="css/style Prestashop.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <img class="imglogo" src="img/logo.gif" alt="" title="" /></img>
+        <!-- Uncomment below if you prefer to use a text image -->
+        <!--<h1><a href="#hero">Header 1</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+        	<li><a href="index.html" >Home</a></li>
+          <li><a href="Owncloud.html" >Owncloud</a></li>
+          <li><a href="Wordpress.html" >Wordpress</a></li>
+          <li><a href="Prestashop.html" ><b>Prestashop</b></a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <!--==========================
+  Owncloud Section
+  ============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Prestashop</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Tutorial de Instalación de Prestashop</p>
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="Texto">
+          <h2 class="about-title">¿Qué es Prestashop?</h2>
+          <p class="about-text">
+            Prestashop es una plataforma donde cualquier empresa crean y gestionan sus tiendas online. Prestashop tiene el convencimiento de que cualquier empresa, tanto pequeñas como grandes, deben tener la posibilidad de tener su propia tienda online sin gastos, por ese motivo su plataforma es 100% gratuita.
+          </p>
+          <h2 class="about-title">¿Qué requisitos necesita tu ordenador?</h2>
+          <p class="about-text">
+            Para que Prestashop funcione perfectamente se deben cumplir ciertos requisitos:
+            <ul>
+              <li>PHP 5.2 o superior.</li>
+              <li>MySQL 5.0 o superior.</li>
+              <li>El hosting es Unix/Linux. (Recomendado).</li>
+              <li>Servidor corre Apache Web Server 1.3 o superior.</li>
+              <li>64 Mb de RAM dedicados a PHP. (Mínimo).</li>
+              <li>Códigos de acceso (cuentas de acceso) a su servidor mediante protocolo FTP y a su base de datos MySQL.</li>
+              <li>Cualquier editor de textos.</li>
+              <li>Cualquier cliente FTP.</li>
+              <li>También necesita la URL gracias a la cual la tienda va a estar visibles en internet.</li>
+            </ul>   
+          </p>
+          <h2 class="about-title">Instalación</h2>
+          <h3><b>1. Instalar Servidor Web</b></h3>
+          <p class="about-text">
+            1.1. Para que Prestashop funcione, debemos instalar un Servidor Web. En nuestro caso, instalaremos Apache2 a través del siguiente comando:
+            <br>
+            <b>$ yum install httpd</b>
+            <br>
+            <br>
+            1.2 Iniciar y habilitar apache
+            <br>
+            <b>$ yum systemctl start httpd</b>
+            <br>
+            <b>$ yum systemctl enable httpd</b>
+            <br>
+            También tendremos que habilitar el mod_rewrite para ello modificaremos la línea “AllowOverride None” por “AllowOverride All”
+            <br>
+            <b>$ nano /etc/httpd/conf/httpd.conf</b>
+          </p>
+          <h3><b>2. Instalación y creación de Base de Datos</b></h3>
+          <p class="about-text">
+            2.1. Para guardar todos los datos de nuestra tienda, debemos tener una base de datos.  Para ello nos descargamos un gestor de base de datos. Gracias al que crearemos y gestionaremos nuestra base de datos. Usaremos el comando:
+            <br>
+            <b>$ yum install mariadb-server mariadb</b>
+            <br>
+            Habilitamos el mariadb:
+            <br>
+            <b>$ systemctl start mariadb</b>
+            <br>
+            Establecemos una contraseña para el mariadb
+            <br>
+            <b>$ mysql_secure_installation</b>
+            <br>
+            <img class="tutoriales" src="img/centos020.png">
+            <br>
+            <br>
+            2.2. Una vez instalados, entraremos dentro de mysql usando este comando:
+            <br>
+            <b>$ mysql -u root -p</b>
+            <br>
+            <br>
+            2.3. Y para finalizar, crearemos una base de datos para nuestra prestashop, junto con un usuario al que le daremos todos los privilegios sobre esa base de datos
+            <br>
+            <br>
+            Crear Base de Datos:
+            <br>
+            <b>CREATE DATABASE prestashop;</b>
+            <br>
+            <br>
+            Crear usuario:
+            <br>
+            <b> CREATE USER 'prestashop' IDENTIFIED BY 'p4ssw0rd';</b>
+            <br>
+            <br>
+            Dar privilegios al usuario:
+            <br>
+            <b>GRANT ALL PRIVILEGES ON prestashop.* TO ‘prestashop’;</b>
+            <br>
+            <br>
+          </p>
+          <h3><b>3. Instalar dependencias PHP</b></h3>
+          <p class="about-text">
+            3.1. Ahora nos toca instalar php y las dependencias necesarias para el funcionamiento correcto de owncloud. Para instalar php usamos el comando:
+            <br>
+            <b>$ yum install php70u*</b>
+            <br>
+            <b>$ service httpd restart</b>
+            <br>
+            <br>
+            3.2. Y finalmente instalamos las dependencias*.
+            <br>
+            <br>
+          </p>
+          
+          <h3><b>4. Instalar dependencias PHP</b></h3>
+          <p class="about-text">
+            4.1. Finalmente instalaremos Prestashop, para ello, iremos a la carpeta html
+            <br>
+            <b>$ cd /var/www/html</b>
+            <br>
+            <br>
+            4.2. Creamos un directorio para Prestashop:
+            <br>
+            <b>$ mkdir prestashop</b>
+            <br>
+            <br>
+            4.3. Damos todos los permisos sobre el directorio de Prestashop:
+            <br>
+            <b>$ chmod -R 777 prestashop</b>
+            <br>
+            <br>
+            4.4. Entramos en el directorio:
+            <br>
+            <b>$ cd prestashop</b>
+            <br>
+            <br>
+            4.5. Nos descargamos Prestashop:
+            <br>
+            <b>$ wget https://download.prestashop.com/download/release /prestashop_1.7.1.1.zip</b>
+            <br>
+            <img class="tutoriales" src="img/prestashop001.png">
+            <br>
+            <br>
+            4.6. Descomprimimos lo descargado:
+            <br>
+            <b>$ unzip prestashop_1.7.1.1.zip</b>
+            <br>
+            <img class="tutoriales" src="img/prestashop002.png">
+            <br>
+            <br>
+          </p>
+          <h3><b>5. Accediendo a nuestro servidor de Prestashop</b></h3>
+          <p class="about-text">
+            5.1. Ahora toca configurar Prestashop y listo. Desde nuestro navegador web, iremos a la barra de navegación y escribiremos en ella de esta manera: IP/prestashop/
+            <br>
+            <br>
+            Si no nos acordamos de nuestra IP, podemos buscarla usando el comando <b>hostname -I</b> o si no la podemos ver también con <b>ifconfig.</b>
+            <br>
+            <b> 10.9.53.106/prestashop.</b>
+            <br>
+            <br>
+            5.2. Dentro de la dirección, solo tenemos que completar los requeistos que nos pongan en cada ventana:
+            <br>
+            1º escogeremos el <b>idioma</b>.
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall001.png">
+            <br>
+            <br>
+            2º aceptaremos <b>licencia</b>: Acepto los términos y condiciones arriba indicados
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall002.png">
+            <br>
+            <br>
+            3º comprobaremos que cumplimos: <b>Compatibilidad del sistema</b>
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall003.png">
+            <br>
+            4º facilitaremos los <b>datos de la tienda</b>.
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall004.png">
+            <br>
+            <br>
+            5º indicaremos los datos de la <b>Base de Datos</b> que hemos creado antes y le daremos a comprobar, si todo sale correcto seguimos adelante
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall005.png">
+            <br>
+            <br>
+            6º se esta instala nuestro Prestashop, veremos una barra de progreso como la siguiente.
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall006.png">
+            <br>
+            <br>
+            Cuando acabe veremos esta pantalla:
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall007.png">
+            <br>
+            <br>
+            5.3. Antes de entrar a tienda o administrador hay que ejecutar:
+            <br>
+            <b>$ rm -R install</b>
+            <br>
+            <br>
+            Para acceder a nuestra sesión de Administrador tendremos que mirar la carpeta /admin que durante la instalación ha sido renombrada a un nombre identificativo ÚNICO para tu tienda (por poner un ejemplo, /admin7890).
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall008.png">
+            <br>
+            <br>
+            <img class="tutorialePress" src="img/prestashopInstall009.png">
+            <br>
+            <br>
+            <h3><a href="http://10.9.53.106/prestashop/index.php"  target="_blanck"><b>Nuestro Prestashop</b></a></h3>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>GRUPO3 2017</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>
